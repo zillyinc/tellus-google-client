@@ -1,6 +1,12 @@
+ENV['GOOGLE_API_KEY'] = 'test'
+ENV['GOOGLE_SIGNING_SECRET'] = 'test'
+ENV['GOOGLE_EMBEDDED_MAP_API_KEY'] = 'test'
+
 require "bundler/setup"
 require "tellus/google/client"
 require "faker"
+require "webmock/rspec"
+require "support/web_stub/google"
 
 RSpec.configure do |config|
   # Enable flags like --only-failures and --next-failure
